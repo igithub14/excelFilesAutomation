@@ -15,9 +15,6 @@ Do While WorkFile <> ""
         xlOpenXMLWorkbookMacroEnabled, CreateBackup:=False
         ActiveWorkbook.Close
      End If
-        
-     ' service message        
-     MsgBox & WorkFile
        
      WorkFile = Dir()
 Loop
