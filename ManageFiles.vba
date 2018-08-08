@@ -31,7 +31,7 @@ Sub ManageFiles()
  
 ' conta quante righe ci sono e poi inserisce formula in colonna E
         Dim rowCount As Integer
-        rowCount = 1
+        rowCount = 0
         rowCount = Range("I:I").Cells.SpecialCells(xlCellTypeConstants).Count
         MsgBox "value is " & rowCount
         Dim Copyrange As String
