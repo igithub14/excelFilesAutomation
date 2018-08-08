@@ -18,4 +18,6 @@ Do While WorkFile <> ""
        
      WorkFile = Dir()
 Loop
+    MsgBox "Terminato con successo."
+
 End Sub
