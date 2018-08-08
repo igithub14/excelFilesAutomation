@@ -53,7 +53,8 @@ Sub ManageFiles()
         Cells(2, 2).Formula = "=MAX(Report!E2:E" & rowCount & ")"
         Cells(3, 2).Formula = "=MIN(Report!E2:E" & rowCount & ")"
         Cells(4, 2).Formula = "=CONTA.NUMERI(Report!E2:E" & rowCount & ")"
-        Cells(5, 2).Formula = "=CONTA.SE(Report!E:E;""<20"")"
+        ' Cells(5, 2).Formula = "=CONTA.SE(Report!E2:E" & rowCount & ";" & Chr(35) & "<20" & Chr(35) & ")" NOT WORKING
+
         
         ActiveWorkbook.Close True
         End With
