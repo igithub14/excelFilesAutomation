@@ -59,7 +59,5 @@ Sub ManageFiles()
         End With
         MyFile = Dir()
     Loop
-
-End Sub
-
+   MsgBox "Terminato con successo."
 End Sub
