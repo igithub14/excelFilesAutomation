@@ -17,7 +17,7 @@ Do While WorkFile <> ""
      End If
         
      ' service message        
-     MsgBox = & WorkFile
+     MsgBox & WorkFile
        
      WorkFile = Dir()
 Loop
