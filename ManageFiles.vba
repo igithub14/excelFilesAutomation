@@ -49,11 +49,11 @@ Sub ManageFiles()
         Cells(4, 1) = "N OCCORRENZE"
         Cells(5, 1) = "N < 20"
         
-        Cells(1, 2).Formula = "=MEDIA(Report!E2:E" & rowCount & ")"
+        Cells(1, 2).FormulaLocal = "=MEDIA(Report!E2:E" & rowCount & ")"
         Cells(2, 2).Formula = "=MAX(Report!E2:E" & rowCount & ")"
         Cells(3, 2).Formula = "=MIN(Report!E2:E" & rowCount & ")"
-        Cells(4, 2).Formula = "=CONTA.NUMERI(Report!E2:E" & rowCount & ")"
-        ' Cells(5, 2).Formula = "=CONTA.SE(Report!E2:E" & rowCount & ";" & Chr(34) & "<20" & Chr(34) & ")" NOT WORKING
+        Cells(4, 2).FormulaLocal = "=CONTA.NUMERI(Report!E2:E" & rowCount & ")"
+        Cells(5, 2).FormulaLocal = "=CONTA.SE(Report!E2:E" & rowCount & ";" & Chr(34) & "<20" & Chr(34) & ")"
 
         
         ActiveWorkbook.Close True
