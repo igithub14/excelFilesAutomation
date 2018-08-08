@@ -1,4 +1,4 @@
-. This script creates a copy of all the .xls files inside a folder, and save this new file with .xlsm extension.
+' This script creates a copy of all the .xls files inside a folder, and save this new file with .xlsm extension.
 ' TO BE DONE: make this script erase .xls files.
 ' TO BE DONE: make this script recursivley run inside a subfolder system.
 Sub TrandformAllXLSFilesToXLSM()
