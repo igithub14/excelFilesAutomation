@@ -43,7 +43,7 @@ Sub ManageFiles()
         ' delete rows with wrong values
         Dim r As Integer
         For r = 1 To Lastrow
-            If IsNumeric(Cells(r, 5)) = False Then
+            If IsError(ActiveCell.Value) Then
                Sheets("Report").Rows(r).EntireRow.Delete
             End If
         Next
