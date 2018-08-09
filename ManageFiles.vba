@@ -40,13 +40,13 @@ Sub ManageFiles()
         Range("E2").Copy
         Range(Copyrange).PasteSpecial (xlPasteAll)
         
-        ' delete rows with wrong values    
-        Dim r As Integer   
-        For r = 1 To Lastrow        
-            If Cells(r, 5) = "#VALORE!" Then           
-               Rows(r).EntireRow.Delete    
+        ' delete rows with wrong values
+        Dim r As Integer
+        For r = 1 To Lastrow
+            If IsNumeric(Cells(r, 5)) = False Then
+               Sheets("Report").Rows(r).EntireRow.Delete
             End If
-        Next      
+        Next
         ' end delete row with wrong value
          
         ActiveWorkbook.Sheets.Add After:=Worksheets(Worksheets.Count)
