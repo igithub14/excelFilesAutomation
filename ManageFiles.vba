@@ -40,12 +40,14 @@ Sub ManageFiles()
         Range("E2").Copy
         Range(Copyrange).PasteSpecial (xlPasteAll)
         
-         ' delete rows with wrong values
-        For i = 1 To Lastrow
+         ' delete rows with wrong values PER QUALCHE STREANO MOTIVO NON CANCELLA TUTETE LE RIGHE
+        Dim compareValue As String
+        compareValue = "On Schedule"
+        For i = Lastrow To 2 Step -1
             If (IsError(Sheets("Report").Cells(i, 5).Value)) Then
                Sheets("Report").Rows(i).EntireRow.Delete
             End If
-        Next i
+        Next
         ' end delete row with wrong value
          
         ActiveWorkbook.Sheets.Add After:=Worksheets(Worksheets.Count)
